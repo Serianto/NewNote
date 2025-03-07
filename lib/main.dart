@@ -1,6 +1,7 @@
 //import 'package:aplikasi/login/login.dart';
 //import 'package:aplikasi/navbar/navbar.dart';
-import 'package:aplikasi/tabbar/tabbar.dart';
+import 'package:aplikasi/login/splashscreen.dart';
+//import 'package:aplikasi/tabbar/tabbar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,8 +34,10 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: TabBarApp() 
+      home: SplashScreen()  
       //Login()
+      // 
+      //TabBarApp() 
       //LoginScreen() 
       //const NavBar(), 
       //const MyHomePage(title: 'Flutter Demo Home Page'),

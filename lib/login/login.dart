@@ -1,7 +1,9 @@
 //import 'dart:ui';
 
 import 'package:aplikasi/home/home.dart';
+//import 'package:aplikasi/service/pref_handler.dart';
 import 'package:flutter/material.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
 
 class Login extends StatefulWidget {
@@ -146,8 +148,16 @@ class _LoginState extends State<Login> {
                       ),
                     ],
                   ),
+                  // ListTile(
+                  //   leading: Icon(Icons.space_bar),
+                  //   title: Text('Login'),
+                  //   onTap: () {
+                  //     PreferenceHnadler.saveId();
+                  //     Navigator.push(context, MaterialPageRoute(builder: (context) => Home(email: _usernameController.text, phone: _phoneController.text)));
+                  //   },
+                  // ),
                   ElevatedButton(
-                    onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => Home(email: _usernameController.text, phone: _phoneController.text,),)),
+                    onPressed: () =>Navigator.push(context, MaterialPageRoute(builder: (context) => Home(email: _usernameController.text, phone: _phoneController.text,),)),
                     style: ElevatedButton.styleFrom(
                       shape: const StadiumBorder(),
                       padding: const EdgeInsets.symmetric(vertical: 16),

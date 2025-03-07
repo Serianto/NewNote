@@ -1,3 +1,6 @@
+import 'package:aplikasi/login/login.dart';
+import 'package:aplikasi/service/pref_handler.dart';
+//import 'package:aplikasi/utils/image.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -26,9 +29,20 @@ class Home extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Image.asset('Asset/google.jpg'),
-                SizedBox(height: 15,),
-                Text('Nama')
+                // Image.asset(ImageApp.logo),
+                // SizedBox(height: 15,),
+                Text('Nama'),
+
+                ListTile(
+                  leading: Icon(Icons.logout),
+                  title: Text('logout'),
+                  onTap: (){
+                    PreferenceHnadler.removeId();
+                    Navigator.pushReplacement(
+                      context, MaterialPageRoute(builder: (context) => Login()),
+                    );
+                  },
+                )
               ],
             ),
             ),
