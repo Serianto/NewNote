@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Navigator.push(context, MaterialPageRoute(
             builder: (context) => ChangeNotifierProvider(
               create: (context) => NewNoteController(),
-              child: const NewOrEditNotePage(false, isNewNote: false)
+              child: const NewOrEditNotePage(isNewNote: false)
             )
             )
           );

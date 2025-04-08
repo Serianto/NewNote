@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -36,10 +33,7 @@ class DefaultFirebaseOptions {
           'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -53,11 +47,31 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBUOXCfXAXh__ISUj5bPACHChVwKfsTccc',
-    appId: '1:381946638742:android:16190e909b030f5dd26db7',
-    messagingSenderId: '381946638742',
-    projectId: 'my-firebase-a39b8',
-    storageBucket: 'my-firebase-a39b8.firebasestorage.app',
+    apiKey: 'AIzaSyAE3Q3MpbAEYfbOOpmmsLSWjpBMKh-5TGc',
+    appId: '1:350815746161:android:d91a3590b7ee610c82c3d0',
+    messagingSenderId: '350815746161',
+    projectId: 'ppkd-mp',
+    storageBucket: 'ppkd-mp.firebasestorage.app',
+  );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBCNgSZW6BYG-PPa7SL7E4MUB8uttOQH20',
+    appId: '1:350815746161:web:24941346d98f73f482c3d0',
+    messagingSenderId: '350815746161',
+    projectId: 'ppkd-mp',
+    authDomain: 'ppkd-mp.firebaseapp.com',
+    storageBucket: 'ppkd-mp.firebasestorage.app',
+    measurementId: 'G-XG72TLRKC5',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyBCNgSZW6BYG-PPa7SL7E4MUB8uttOQH20',
+    appId: '1:350815746161:web:972910aaf3c7efd682c3d0',
+    messagingSenderId: '350815746161',
+    projectId: 'ppkd-mp',
+    authDomain: 'ppkd-mp.firebaseapp.com',
+    storageBucket: 'ppkd-mp.firebasestorage.app',
+    measurementId: 'G-W1CP6WBY0R',
   );
 
 }

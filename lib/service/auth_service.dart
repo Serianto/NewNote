@@ -53,7 +53,8 @@ static Future<UserCredential> signInWithGoogle() async{
   if(googleUser == null){
     throw const NoGoogleAccountChosenException();
   }
-
+  
+  
   final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
 
   

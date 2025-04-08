@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         home: StreamBuilder<User?>(
           stream: AuthService.userStream, 
           builder: (context, snapshot) {
-            return snapshot.hasData && AuthService.isEmailVerified ? const LoginScreen() : const RegisterScreen();
+            return snapshot.hasData && AuthService.isEmailVerified ? const MainPage() : const RegisterScreen();
           },
         )
       ),

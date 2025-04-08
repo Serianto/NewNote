@@ -27,7 +27,7 @@ class NoteCard extends StatelessWidget {
           context, MaterialPageRoute(
             builder: (context) => ChangeNotifierProvider(
               create: (_) => NewNoteController()..note = note, 
-              child: const NewOrEditNotePage(false, isNewNote: false)
+              child: const NewOrEditNotePage(isNewNote: false)
             ),
           ),
         );
