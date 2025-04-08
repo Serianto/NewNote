@@ -6,6 +6,7 @@ import 'package:aplikasi/widget/note_form_field.dart';
 import 'package:aplikasi/widget/note_icon_button_outlined.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:aplikasi/page/recover_pass.dart';
@@ -61,16 +62,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text(isRegisterMode ? 'Register' : 'Sign In',
+                      Lottie.asset('Asset/lottielogin.json'),
+                      Text(isRegisterMode ? 'Daftar' : 'Sign In',
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                        fontSize: 48,
+                        fontSize: 36,
                         fontWeight: FontWeight.w600,
                         color: primary,
                         ),
                       ),
                       const SizedBox(height: 16),
-                      const Text('Login atau Register', textAlign: TextAlign.center),
+                      const Text('Masuk atau daftar', textAlign: TextAlign.center),
                       const SizedBox(height: 48),
                       if(isRegisterMode) ...[
                         NoteFormField(
@@ -190,9 +192,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         style: const TextStyle(color: grey700),
                         children: [
                           TextSpan(
-                            text: isRegisterMode ? 'Daftar' : 'Login',
+                            text: isRegisterMode ? ' Login' : ' Daftar',
                             style: const TextStyle(
-                              color: primary,
+                              color: text,
                               fontWeight: FontWeight.bold
                             ),
                             recognizer: TapGestureRecognizer()..onTap = (){

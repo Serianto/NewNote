@@ -15,10 +15,10 @@ class NoteButton extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             offset: const Offset(2, 2),
-            color: isOutlined ? primary : black,
+            color: isOutlined ? primary : grey300,
           )
         ],
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(15),
       ),
       child: ElevatedButton(
         onPressed: onPressed, 

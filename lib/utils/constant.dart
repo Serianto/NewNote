@@ -9,6 +9,7 @@ const Color grey100 = Color(0xFFE9E9E9);
 const Color background = Color(0xFFF1F2F6);
 const Color black = Colors.black;
 const Color white = Colors.white; 
+const Color text = Color(0xFF0000FF);
 
 const Map<String, String> authExceptionMapper = {
   'email sudah digunakan' : 'email ini sudah digunakan, pake yang lain',

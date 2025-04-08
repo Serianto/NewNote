@@ -17,7 +17,7 @@ class NoteIconButtonOutlined extends StatelessWidget {
         backgroundColor: primary,
         foregroundColor: white,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(15),
           side: const BorderSide(
             color: black
           )
